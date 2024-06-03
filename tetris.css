@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff, #00c6ff, #0052d4, #4364f7, #6fb1fc, #00c6ff, #0072ff);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#sidePanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+#score, #reserva {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #FFEB3B;
+    font-size: 0.9rem;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 30vw;
+    max-width: 250px;
+    text-align: center;
+    margin-left: 8px;
+}
+
+#reserva:hover {
+    cursor: url("/img/icons8-hand-cursor-38.png"), auto;
+}
+
+#score h2, #reserva h2 {
+    margin: 0;
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+#scoreValue {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#canvasBoard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    margin-right: 10px;
+}
+
+canvas {
+    border: 1px solid white;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+

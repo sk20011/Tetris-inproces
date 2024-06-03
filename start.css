@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh; 
+    font-family: "Pixelify Sans", sans-serif;
+    background: linear-gradient(to right, #9000ff, #784fff, #696fff, #6988fe, #799cf2, #799ded, #7a9ee7, #7c9fe2, #658fe5, #4d7fe7, #336ee8, #125de7);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s linear infinite;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 14rem; 
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    background: linear-gradient(to right, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #800080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+button {
+    padding: 1.5rem 5rem; 
+    width: 100%; 
+    max-width: 30rem; 
+    border-radius: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    box-shadow: 0 0 30px #ef5f49;
+    background-image: linear-gradient(to right top, #4f73a8, #5572c9, #7569e2ee, #a954eec5, #e112eb);
+    color: white;
+    border: none;
+    height: auto; 
+    margin: 2rem 0; 
+    animation: buttonAnimation 2s ease infinite;
+    cursor: url("/img/icons8-cursor-64.png"), auto;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+button:hover {
+    box-shadow: 0 0 25px white;
+    text-shadow: 2px 2px 3px black;
+    animation: none; 
+}
+
+@keyframes buttonAnimation {
+    0% { transform: scale(1); background-image: linear-gradient(to right top, #4f73a8, #5572c9, #7569e2ee, #a954eec5, #e112eb); }
+    50% { transform: scale(1.1); background-image: linear-gradient(to right top, #5572c9, #7569e2ee, #a954eec5, #e112eb, #4f73a8); }
+    100% { transform: scale(1); background-image: linear-gradient(to right top, #7569e2ee, #a954eec5, #e112eb, #4f73a8, #5572c9); }
+}
+
+@media screen and (max-width: 768px) {
+    #titulo {
+        font-size: 6rem; 
+    }
+
+    button {
+        max-width: 20rem; 
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #titulo {
+        font-size: 1rem;
+    }
+
+    button {
+        max-width: 15rem; 
+        font-size: 1.25rem;
+    }
+}

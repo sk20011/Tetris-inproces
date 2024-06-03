@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tetris.css">
+    <link rel="icon" href="/img/download.png" type="imagen/png">
+    <title>Juego de Tetris</title>
+</head>
+<body>
+    <div id="container">
+        <div id="sidePanel">
+            <div id="reserva">
+                <h2>Guardar Pieza</h2>
+                <canvas id="reservaPieza">FORMA DE PIEZA</canvas>
+            </div>
+            <div id="score">
+                <h2>Puntuación:</h2>
+                <span id="scoreValue">0</span>
+            </div>
+        </div>
+        <div id="canvasBoard"><canvas id="board"></canvas></div>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
